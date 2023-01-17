@@ -1,9 +1,9 @@
-$(document).foundation();
-
-//  display for the number of contributions
+const contributionsDisplay = document.getElementById("contributions-number");
+let displayNumber = 0;
 const countUp = () => {
   const numberOfCards = document.getElementsByClassName("card").length;
-  const numberOfContributors = numberOfCards - 1; // minus the example card
+  console.log("here", numberOfCards);
+  const numberOfContributors = numberOfCards; // minus the example card
 
   setTimeout(() => {
     if (displayNumber < numberOfContributors) {
@@ -12,6 +12,6 @@ const countUp = () => {
       countUp();
     }
 
-    if (displayNumber === numberOfContributors) displayClass.add("rubberBand");
+    // if (displayNumber === numberOfContributors) displayClass.add("rubberBand");
   }, 15);
 };
